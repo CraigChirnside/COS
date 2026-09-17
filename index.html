@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f2f2f3">
+<title>Craig Personal OS</title>
+<link rel="stylesheet" href="_ds/industry-6d55b748-4611-464e-8643-d2c8d4557dd6/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+  a { color: var(--color-accent-700); }
+  a:hover { color: var(--color-accent-900); }
+  .cos-tab:hover, .cos-row:hover { background: var(--color-accent-100); }
+  .cos-nudge:active { background: var(--color-accent-200); }
+
+  /* The app owns the whole viewport. #cos-app is the scroll container the
+     device frame's content area used to be, so the header scrolls away and the
+     tab bar stays pinned by its own position:sticky. */
+  html, body { height: 100%; }
+  body { margin: 0; overflow: hidden; background: var(--color-bg); }
+  #cos-app {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+</style>
+</head>
+<body>
+<div id="cos-app"></div>
+<script src="dom.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
