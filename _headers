@@ -1,0 +1,10 @@
+# Cloudflare Pages / Netlify header rules.
+#
+# The service worker and manifest must not be served from a long cache, or a
+# deploy can take days to reach a phone that already has the old copy. Everything
+# else is fine on the host default, because sw.js revalidates the shell itself.
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Cache-Control: no-cache
